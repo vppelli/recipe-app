@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['polar-ocean-95813-5555e34cade6.herokuapp.com']
+ALLOWED_HOSTS = ['recipe-mikes.herokuapp.com']
 
 
 # Application definition
