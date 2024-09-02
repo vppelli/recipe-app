@@ -21,12 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['recipe-mikes-8a1f7a74a98b.herokuapp.com']
+# ALLOWED_HOSTS = ['recipe-mikes-8a1f7a74a98b.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -121,10 +122,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[BASE_DIR / 'static']
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT= BASE_DIR / 'media'
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
