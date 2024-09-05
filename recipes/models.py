@@ -16,11 +16,8 @@ class Recipe(models.Model):
     def get_absolute_url(self):
         return reverse('recipes:recipes_detail', kwargs={'pk': self.pk})
     
-    def get_split_ingredients(self):
-        return self.ingredients.split(", ")
-    
     def calculate_difficulty(self):
-        ingredient = len(self.get_split_ingredients())
+        ingredient = len(self.ingredients.split(", "))
         if self.cooking_time < 10 and ingredient < 4:
             return "Easy"
         elif self.cooking_time < 10 and ingredient >= 4:
