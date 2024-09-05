@@ -15,7 +15,7 @@ To deploy my Django web application on a web server, Enhance user experience and
 # [Recipe App](https://recipe-mikes-8a1f7a74a98b.herokuapp.com) Live
 ![Desktop View Recipe App](https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/welcome_Desktop.png?raw=true)
 
-<img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/welcome_Mobile.png?raw=true" width=330> <img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/recipes-overview_mobile.png?raw=true" width=330> <img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/recipe5_mobile.png?raw=true" width=330>
+<img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/welcome_Mobile.png?raw=true" width=250> <img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/recipes-overview_mobile.png?raw=true" width=250> <img src="https://github.com/vppelli/python-web-development/blob/main/Achievement%202/Exercise%202.5/Screenshots/recipe5_mobile.png?raw=true" width=250>
 
 - Test Login Account:
 > username: Preview  password: Testuser123
