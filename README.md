@@ -1,4 +1,5 @@
-# Recipe App
+[<picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/vppelli/Vppelli/blob/main/img/RECIPEAPP.png"><source media="(prefers-color-scheme: light)" srcset="https://github.com/vppelli/Vppelli/blob/main/img/LRECIPEAPP.png"><img alt="RecipeApp link" src="https://github.com/vppelli/Vppelli/blob/main/img/RECIPEAPP.png">
+</picture>](https://github.com/vppelli/recipe-app)
 
 # Description
  A Python, Django-based web application that allows users to log in, add, edit, delete, or view recipes stored using a PostgreSQL database and hosted through Heroku. Users can store all recipes in one application allowing them to view them anytime they want.
