@@ -8,5 +8,5 @@ urlpatterns = [
    path("", home, name="recipes_home"),
    path("recipes/", RecipeListView.as_view(), name="recipes_list"),
    path("recipes/<pk>/", RecipeDetailView.as_view(), name="recipes_detail"),
-   path("recipes/add/", add_recipe, name="recipes_add"),
+   path("add/", add_recipe, name="recipes_add"),
 ]
