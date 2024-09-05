@@ -11,6 +11,9 @@ from .utils import get_chart, get_recipename_from_id
 def home(request):
    return render(request, 'recipes/recipes_home.html')
 
+def about(request):
+   return render(request, 'recipes/about.html')
+
 @login_required
 def add_recipe(request):
    if request.method == 'POST':
