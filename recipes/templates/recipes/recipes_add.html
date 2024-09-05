@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>{{ object.name }} Details</title>
+</head>
+
+<body style="height: 100vh; padding: 40px 20px 40px 20px;">
+    <div class="auto_container">
+        <div class="alignright">
+            <a href ="/recipes/">X</a>
+        </div>
+        <div class="detail no-max-h">
+            <div class="padding">
+                <form class="container center" method="POST" enctype="multipart/form-data">
+                    <h2 style="color: var(--accent);">New Recipe</h2>
+                    {% csrf_token %}
+                    <input type="text" name="name" class="fill" id="id_name" placeholder="Recipe Name" required>
+                    <input type="number" name="cooking_time" class="fill" id="id_cooking_time" placeholder="Cooking Time (minutes)" required>
+                    <textarea name="about" class="fill text-left" id="id_about" placeholder="About" rows="5"></textarea>
+                    <textarea name="ingredients" class="fill text-left" id="id_ingredients" placeholder="Ingredients" rows="5" required></textarea>
+                    <input type="file" name="pic" class="fill primary" id="id_picture">
+                    <button type="submit" class="btn">Add Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

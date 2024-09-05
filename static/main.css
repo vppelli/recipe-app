@@ -54,6 +54,7 @@ ul {
     background-color: var(--colorfade);
     padding: 20px 40px;
     overflow: scroll;
+    max-height: 232px;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -83,23 +84,6 @@ ul {
     gap: 20px;
     align-items: center;
 }
-.alignleft {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-}
-.alignright {
-    display: flex;
-    justify-content: right;
-    gap: 5px;
-}
-.alignbottom {
-    display: flex;
-    justify-content: flex-end;
-}
-.center {
-    align-items: center;
-}
 .detail {
     display: flex;
     border-radius: 25px;
@@ -121,6 +105,23 @@ ul {
     align-items: center;
     text-align: center;
     gap: 5px;
+}
+.alignleft {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.alignright {
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+.alignbottom {
+    display: flex;
+    justify-content: flex-end;
+}
+.center {
+    align-items: center;
 }
 
 .fill {
@@ -248,7 +249,8 @@ button:hover.primary {
     color: var(--secondary);
     opacity: .6;
 }
-input[type=text], input[type=password], select {
+input[type=text], input[type=password], input[type=number], select, textarea {
+    text-align: left;
     border-radius: 25px;
     padding-left: 20px;
     border: 0px;
@@ -281,4 +283,10 @@ button:focus {
 }
 .no-wrap {
     flex-wrap: nowrap;
+}
+.no-max-h {
+    max-height: none;
+}
+.text-left {
+    text-align: left;
 }

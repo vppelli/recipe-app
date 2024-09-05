@@ -1,14 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect  
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from .models import Recipe
-from .forms import RecipesSearchForm
+from .forms import RecipesSearchForm, RecipeAddForm
 import pandas as pd
 from .utils import get_chart, get_recipename_from_id
 
 # Create your views here.
 def home(request):
    return render(request, 'recipes/recipes_home.html')
+
+@login_required
+def add_recipe(request):
+   if request.method == 'POST':
+      form = RecipeAddForm(request.POST, request.FILES)
+      if form.is_valid():
+         form.save()
+         return redirect('recipes/recipe_list.html')  # Redirect to the recipe list after saving
+   else:
+      form = RecipeAddForm()
+
+   context={
+         'form': form,
+   }
+   return render(request, 'recipes/add/recipe_add.html', context)
 
 class RecipeListView(LoginRequiredMixin, ListView):
    model = Recipe
@@ -48,7 +64,7 @@ class RecipeListView(LoginRequiredMixin, ListView):
          'chart': chart,
       }
 
-      #Load recipes_search.html page using data from form  
+      #Load recipes_list.html page using data from form  
       return render(request, 'recipes/recipes_list.html', context)
 
 class RecipeDetailView(LoginRequiredMixin, DetailView):
