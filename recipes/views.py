@@ -17,7 +17,7 @@ def add_recipe(request):
       form = RecipeAddForm(request.POST, request.FILES)
       if form.is_valid():
          form.save()
-         return redirect('recipes/recipe_list.html')  # Redirect to the recipe list after saving
+         return redirect('recipes/recipes_list.html')  # Redirect to the recipe list after saving
    else:
       form = RecipeAddForm()
 
