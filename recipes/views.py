@@ -24,7 +24,7 @@ def add_recipe(request):
    context={
          'form': form,
    }
-   return render(request, 'recipes/add/recipe_add.html', context)
+   return render(request, 'recipes/recipe_add.html', context)
 
 class RecipeListView(LoginRequiredMixin, ListView):
    model = Recipe
